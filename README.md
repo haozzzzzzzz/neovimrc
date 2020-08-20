@@ -1,0 +1,3 @@
+- Execute init.sh to install dependencies.
+- Shell cmd `nvim` enter nvim.
+- Vim cmd `:PlugInstall` to install vim plugins.
