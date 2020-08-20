@@ -52,6 +52,7 @@ let mapleader = ","
 map <leader>1 :NERDTreeToggle<CR>
 map <leader>2 :FloatermToggle<CR>
 tnoremap <leader>2 <C-\><C-n>:FloatermToggle<CR>
+map <leader>3 :TagbarToggle<CR>
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -86,6 +87,11 @@ Plug 'itchyny/lightline.vim'
 " Floaterm 
 " https://github.com/voldikss/vim-floaterm
 Plug 'voldikss/vim-floaterm'
+
+" Cpp development
+"
+" tagbar
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
