@@ -50,6 +50,8 @@ let mapleader = ","
 " set as leader key, so here use space key as leader key.
 " Use space replace command to control tools.
 map <leader>1 :NERDTreeToggle<CR>
+map <leader>2 :FloatermToggle<CR>
+tnoremap <leader>2 <C-\><C-n>:FloatermToggle<CR>
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -102,3 +104,4 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
+
