@@ -41,6 +41,10 @@ set cursorline
 " Nowrap line
 set nowrap
 
+" Code folding
+set foldmethod=syntax
+set nofoldenable
+
 " map leader key
 let mapleader = ","
 
@@ -92,6 +96,9 @@ Plug 'voldikss/vim-floaterm'
 "
 " tagbar
 Plug 'majutsushi/tagbar'
+
+" YouCompleteMe plugin
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
