@@ -7,7 +7,7 @@ set showmatch
 " case insensitive matching
 set ignorecase
 
-" hightlight search result
+" hightlight search result. use :noh to remove highlight
 set hlsearch
 
 " tabs
@@ -100,12 +100,17 @@ Plug 'majutsushi/tagbar'
 " YouCompleteMe plugin
 Plug 'ycm-core/YouCompleteMe'
 
+" vimspector
+" https://github.com/puremourning/vimspector
+Plug 'puremourning/vimspector'
+
 call plug#end()
 
 " plugin config
 " use dracula color scheme
+" Vim xterm-256color color table: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 colorscheme dracula
-
+hi Comment ctermfg=246 
 
 " lightline plugin
 let g:lightline = {
@@ -118,3 +123,16 @@ let g:lightline = {
       \ },
       \ }
 
+" vimspector plugin
+let g:vimspector_enable_mappings = 'HUMAN'
+" Human key mode
+" F5: Where debuging, continue. Otherwise start debugging. Api:vimspector#continue()
+" F3: Stop debugging. Api: vimspector#stop()
+" F4: Restart debuging with same configuration. Api: vimspctor#Restart()
+" F6: Pause debugee. Api: vimspector#Pause()
+" F9: Toggle line breakpoint on the current line. Api: vimspector#ToggleBreakpoint()
+" <leader>F9: Toggle conditional line breakpoint in the current line. Api:vimspector#Togglebreakpoint( { trigger expr, hit count expr } )
+" F8: Add a function breakpoint for the expresson uinder cursor. Api: vimsector#AddFunctionBreakpoint('<cexpr>')
+" F10: Step Over. Api: vimspector#StepOver()
+" F11: Step Into. Api: vimspector#StepInto()
+" F12: Step out of current function scope. Api: vimspector#StepOut()
