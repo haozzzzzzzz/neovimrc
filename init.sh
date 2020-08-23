@@ -1,7 +1,10 @@
 #!/bin/bash
-# install vim-plug plugin manager
+# nvim install vim-plug plugin manager
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# vim install vim-plug
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # ctags
 sudo apt install ctags

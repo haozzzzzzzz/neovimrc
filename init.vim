@@ -58,6 +58,14 @@ map <leader>2 :FloatermToggle<CR>
 tnoremap <leader>2 <C-\><C-n>:FloatermToggle<CR>
 map <leader>3 :TagbarToggle<CR>
 
+" tabs
+map <leader>tp :tabp<CR> " go to previous tab
+map <leader>tn :tabn<CR> " go to next tab
+map <leader>tc :tabc<CR> " close current tab
+
+" vimspector
+map <leader>dc :call vimspector#Reset()<CR> " close vimspector
+
 " Disable Arrow keys in Normal mode
 map <up> <nop>
 map <down> <nop>
