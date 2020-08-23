@@ -42,7 +42,20 @@ set cursorline
 set nowrap
 
 " Code folding
-set foldmethod=syntax
+" za 打开/关闭当前的折叠
+" zc 关闭当前打开的折叠
+" zo 打开当前的折叠
+" zm 关闭所有的折叠
+" zM 关闭所有折叠及嵌套的折叠
+" zr 打开所有折叠
+" zR 打开所有这得及其嵌套的折叠
+" zd 删除当前折叠
+" zE 删除所有折叠
+" zj 移动至下一个折叠
+" zk 移动至上一个折叠
+" zn 禁用折叠
+" zN 启用折叠
+set foldmethod=syntax " :h fold-syntax
 set nofoldenable
 
 " map leader key
@@ -65,6 +78,10 @@ map <leader>tc :tabc<CR> " close current tab
 
 " vimspector
 map <leader>dc :call vimspector#Reset()<CR> " close vimspector
+
+" NERDCommenter
+" https://github.com/preservim/nerdcommenter#default-mappings
+map <leader>/ <leader>c<Space><CR>
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -108,9 +125,15 @@ Plug 'majutsushi/tagbar'
 " YouCompleteMe plugin
 Plug 'ycm-core/YouCompleteMe'
 
+" Comment plugin
+Plug 'preservim/nerdcommenter'
+
 " vimspector
 " https://github.com/puremourning/vimspector
 Plug 'puremourning/vimspector'
+
+" Brackets auto pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -144,3 +167,33 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " F10: Step Over. Api: vimspector#StepOver()
 " F11: Step Into. Api: vimspector#StepInto()
 " F12: Step out of current function scope. Api: vimspector#StepOut()
+"
+
+" nerdcommenter plugin
+" Key map: https://github.com/preservim/nerdcommenter#default-mappings
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf="~/.config/nvim/.ycm_extra_conf.py"
