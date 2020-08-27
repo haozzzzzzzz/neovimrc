@@ -22,3 +22,6 @@ python3 install --clang-completer
 # use PlugInstall download vimspector
 cd ~/.vim/plugged/vimspector/
 ./install_gadget.py --enable-c
+
+"install floaterm dependency
+pip3 install neovim-remote

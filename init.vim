@@ -135,6 +135,10 @@ Plug 'puremourning/vimspector'
 " Brackets auto pairs
 Plug 'jiangmiao/auto-pairs'
 
+" Highlight yank area
+" https://github.com/machakann/vim-highlightedyank
+Plug 'machakann/vim-highlightedyank'
+
 call plug#end()
 
 " plugin config
