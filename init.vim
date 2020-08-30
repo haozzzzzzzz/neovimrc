@@ -24,7 +24,7 @@ set wildmode=longest,list
 
 " set an 80 column border for good coding style
 " i will show an seperate line in the screen
-" set cc=80
+set cc=80
 
 " allows auto-indenting depending on file type
 filetype plugin indent on
@@ -147,6 +147,13 @@ Plug 'jiangmiao/auto-pairs'
 " https://github.com/machakann/vim-highlightedyank
 Plug 'machakann/vim-highlightedyank'
 
+" google codefmt
+" https://github.com/google/vim-codefmt
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
+
 call plug#end()
 
 " plugin config
@@ -217,3 +224,21 @@ let g:UltiSnipsListSnippets="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltisSnipsEditSplit="vertcal"
+
+" google codefmt
+"
+call glaive#Install()
+Glaive codefmt plugin[mappings]
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END
