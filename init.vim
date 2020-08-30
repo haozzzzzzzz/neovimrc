@@ -117,6 +117,14 @@ Plug 'itchyny/lightline.vim'
 " https://github.com/voldikss/vim-floaterm
 Plug 'voldikss/vim-floaterm'
 
+" Code live template
+" https://github.com/SirVer/ultisnips
+" https://vimzijun.net/2016/10/30/ultisnip/
+" code snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+
 " Cpp development
 "
 " tagbar
@@ -201,3 +209,11 @@ let g:NERDToggleCheckAllLines = 1
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf="~/.config/nvim/.ycm_extra_conf.py"
+
+" UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltisSnipsEditSplit="vertcal"
