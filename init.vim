@@ -103,7 +103,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+" It's an interactive Unix filter for command-line that can be used with any list; 
+" files, command history, processes, hostnames, bookmarks, git commits, etc.
 " https://github.com/junegunn/fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
