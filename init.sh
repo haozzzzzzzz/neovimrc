@@ -23,5 +23,9 @@ python3 install --clang-completer
 cd ~/.vim/plugged/vimspector/
 ./install_gadget.py --enable-c
 
-"install floaterm dependency
+# install floaterm dependency
 pip3 install neovim-remote
+
+# install clang-format for google/vim-codefmt c/cpp file type
+sudo apt install clang-format
+
