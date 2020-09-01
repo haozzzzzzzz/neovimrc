@@ -5,7 +5,7 @@
 
 ### clang-format style config
 - https://releases.llvm.org/9.0.0/tools/clang/docs/ClangFormatStyleOptions.html
-touch config file `.clang-format` or `_clang-format` in you project
+touch yaml format config file `.clang-format` or `_clang-format` in you project
 ```
-IndentWidth=4
+IndentWidth.4
 ```

@@ -230,9 +230,13 @@ let g:UltisSnipsEditSplit="vertcal"
 "
 call glaive#Install()
 Glaive codefmt plugin[mappings]
+
+" ignore detect file type
+" .h.in cmake config header file
 augroup autoformat_settings
+  au! BufRead,BufNewFile *.h.in             setfiletype ignored
   autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+  " autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
   autocmd FileType dart AutoFormatBuffer dartfmt
   autocmd FileType go AutoFormatBuffer gofmt
   autocmd FileType gn AutoFormatBuffer gn
