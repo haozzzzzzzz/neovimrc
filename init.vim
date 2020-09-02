@@ -164,6 +164,7 @@ colorscheme dracula
 hi Comment ctermfg=246 
 
 " lightline plugin
+" bottom status bar
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
