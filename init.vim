@@ -72,9 +72,18 @@ tnoremap <leader>2 <C-\><C-n>:FloatermToggle<CR>
 map <leader>3 :TagbarToggle<CR>
 
 " tabs
-map <leader>tp :tabp<CR> " go to previous tab
-map <leader>tn :tabn<CR> " go to next tab
-map <leader>tc :tabc<CR> " close current tab
+noremap <leader><Tab> :tabn<CR> " go to next tab
+noremap <leader><S-Tab> :tabp<CR> " go to previous tab
+noremap <leader>tc :tabc<CR> " close current tab
+noremap <leader>tm :tabm 0<CR> " move current tab to first
+
+" window
+noremap <leader>w <C-w>w " go to next tab
+noremap <leader>wt <C-w>T " open current window in tab
+noremap <leader>wc :clo<CR> " close current window
+
+" exit
+noremap <leader><Esc> :qa<CR> " quit
 
 " vimspector
 map <leader>dc :call vimspector#Reset()<CR> " close vimspector
