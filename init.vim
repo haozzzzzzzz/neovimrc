@@ -78,7 +78,7 @@ noremap <leader>tc :tabc<CR> " close current tab
 noremap <leader>tm :tabm 0<CR> " move current tab to first
 
 " window
-noremap <leader>w <C-w>w " go to next tab
+noremap <leader>w <C-w>w " go to next window
 noremap <leader>wt <C-w>T " open current window in tab
 noremap <leader>wc :clo<CR> " close current window
 
