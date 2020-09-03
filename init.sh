@@ -16,7 +16,9 @@ sudo apt install build-essential cmake python3-dev
 # use PlugInstall download YouCompleteMe
 cd ~/.vim/Plugged/YouCompleteMe/
 python3 install --clang-completer
-
+# python3 install --go-completer # go completer
+# python3 install --rust-completer # rust completer
+# python3 install --all # all supported completer
 
 # install vimspector
 # use PlugInstall download vimspector
