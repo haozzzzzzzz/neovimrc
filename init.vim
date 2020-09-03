@@ -85,12 +85,25 @@ noremap <leader>wc :clo<CR> " close current window
 " exit
 noremap <leader><Esc> :qa<CR> " quit
 
+" clear secreen
+nnoremap <C-L> :nohlsearch<CR><C-L> " extend default clean secreen keymap. Set no hl search result if exists.
+
 " vimspector
 map <leader>dc :call vimspector#Reset()<CR> " close vimspector
 
 " NERDCommenter
 " https://github.com/preservim/nerdcommenter#default-mappings
 map <leader>/ <leader>c<Space><CR>
+
+" YouCompleteMe shortcuts
+" command helps:
+" https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
+imap <leader><Space> <C-Space> " force trigger semantic completion
+
+" UltiSnips
+" used in below configs
+" insert mode
+
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -230,8 +243,7 @@ let g:ycm_global_ycm_extra_conf="~/.config/nvim/.ycm_extra_conf.py"
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
-let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsExpandTrigger="<leader><Enter>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltisSnipsEditSplit="vertcal"
