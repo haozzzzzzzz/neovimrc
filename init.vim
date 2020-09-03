@@ -85,6 +85,9 @@ noremap <leader>wc :clo<CR> " close current window
 " exit
 noremap <leader><Esc> :qa<CR> " quit
 
+" clear secreen
+nnoremap <C-L> :nohlsearch<CR><C-L> " extend default clean secreen keymap. Set no hl search result if exists.
+
 " vimspector
 map <leader>dc :call vimspector#Reset()<CR> " close vimspector
 
