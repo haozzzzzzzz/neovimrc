@@ -117,10 +117,6 @@ map <leader>/ <leader>c<Space><CR>
 " command helps:
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
 " force trigger semantic completion
-imap <leader><Space> <C-Space> 
-
-" Show document in a popup at the cursor location after a short delay.
-nmap <leader>D <plug>(YCMHover)
 let g:ycm_key_invoke_completion="<leader>."
 
 " Disable Arrow keys in Normal mode
@@ -258,8 +254,8 @@ let g:NERDToggleCheckAllLines = 1
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf="~/.config/nvim/.ycm_extra_conf.py"
 let g:ycm_add_preview_to_completeopt=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_add_preview_to_completeopt-option
-let g:ycm_autoclose_preview_window_after_completion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
-let g:ycm_autoclose_preview_window_after_insertion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_insertion-option
+" let g:ycm_autoclose_preview_window_after_completion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
+" let g:ycm_autoclose_preview_window_after_insertion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_insertion-option
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
