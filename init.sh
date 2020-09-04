@@ -15,10 +15,11 @@ sudo apt install ctags
 sudo apt install build-essential cmake python3-dev
 # use PlugInstall download YouCompleteMe
 cd ~/.vim/Plugged/YouCompleteMe/
-python3 install --clang-completer
-# python3 install --go-completer # go completer
-# python3 install --rust-completer # rust completer
-# python3 install --all # all supported completer
+python3 install.py --clang-completer --go-completer
+# python3 install.py --go-completer # go completer
+# python3 install.py --rust-completer # rust completer
+# if you want to support all kind of completer. You should pass the flags to intall.py.
+# python3 install.py --all # all supported completer
 
 # install vimspector
 # use PlugInstall download vimspector

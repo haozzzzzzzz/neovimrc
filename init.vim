@@ -118,14 +118,10 @@ map <leader>/ <leader>c<Space><CR>
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
 " force trigger semantic completion
 imap <leader><Space> <C-Space> 
+
 " Show document in a popup at the cursor location after a short delay.
 nmap <leader>D <plug>(YCMHover)
 let g:ycm_key_invoke_completion="<leader>."
-
-" UltiSnips
-" used in below configs
-" insert mode
-
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
