@@ -118,6 +118,10 @@ map <leader>/ <leader>c<Space><CR>
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
 " force trigger semantic completion
 let g:ycm_key_invoke_completion="<leader>."
+" TODO add code navigate
+
+" FZF
+" add fzf keymap
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
