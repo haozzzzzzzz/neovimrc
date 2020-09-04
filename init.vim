@@ -98,7 +98,10 @@ map <leader>/ <leader>c<Space><CR>
 " YouCompleteMe shortcuts
 " command helps:
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
-imap <leader><Space> <C-Space> " force trigger semantic completion
+" force trigger semantic completion
+imap <leader><Space> <C-Space> 
+" Show document in a popup at the cursor location after a short delay.
+nmap <leader>D <plug>(YCMHover)
 
 " UltiSnips
 " used in below configs
