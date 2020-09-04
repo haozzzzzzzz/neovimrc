@@ -107,7 +107,18 @@ nnoremap <C-L> :nohlsearch<CR><C-L>
 
 " vimspector
 " close vimspector
-map <leader>dc :call vimspector#Reset()<CR> 
+nmap <F1> :call vimspector#Reset()<CR> 
+" Human key mode
+" F3: Stop debugging. Api: vimspector#stop()
+" F4: Restart debuging with same configuration. Api: vimspctor#Restart()
+" F5: Where debuging, continue. Otherwise start debugging. Api:vimspector#continue()
+" F6: Pause debugee. Api: vimspector#Pause()
+" <leader>F9: Toggle conditional line breakpoint in the current line. Api:vimspector#Togglebreakpoint( { trigger expr, hit count expr } )
+" F8: Add a function breakpoint for the expresson uinder cursor. Api: vimsector#AddFunctionBreakpoint('<cexpr>')
+" F9: Toggle line breakpoint on the current line. Api: vimspector#ToggleBreakpoint()
+" F10: Step Over. Api: vimspector#StepOver()
+" F11: Step Into. Api: vimspector#StepInto()
+" F12: Step out of current function scope. Api: vimspector#StepOut()
 
 " NERDCommenter
 " https://github.com/preservim/nerdcommenter#default-mappings
@@ -118,10 +129,38 @@ map <leader>/ <leader>c<Space><CR>
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
 " force trigger semantic completion
 let g:ycm_key_invoke_completion="<leader>."
-" TODO add code navigate
+map <leader>zd :YcmCompleter GetDoc<CR>
+map <leader>zt :YcmCompleter GetType<CR>
+map <leader>zg :YcmCompleter GoTo<CR>
 
 " FZF
+" https://github.com/junegunn/fzf.vim#commands
 " add fzf keymap
+" search files
+map <leader>ff :Files<CR>
+" search open buffers
+map <leader>fb :Buffers<CR>
+" search project file lines
+map <leader>fL :Lines<CR>
+" seasrch buffer file lines
+map <leader>fl :BLines<CR>
+" search project file tags
+map <leader>fT :Tags<CR>
+" search buffer file tags
+map <leader>ft :BTags<CR>
+" search open windows
+map <leader>fw :Windows<CR>
+" search old files and open buffers
+map <leader>fh :History<CR>
+" search normal mode keymap
+map <leader>fm :Maps<CR>
+" search vim help tags
+map <leader>fH :Helptags<CR>
+" CTRL-T: open in a new tab
+" CTRL-X: open in a new split
+" CTRL-V: open in a vertical split
+" Bang-versions of the commands (e.g. Ag!) will open fzf in fullscreen
+
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -227,7 +266,9 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " F10: Step Over. Api: vimspector#StepOver()
 " F11: Step Into. Api: vimspector#StepInto()
 " F12: Step out of current function scope. Api: vimspector#StepOut()
-"
+" let g:vimspector_code_minwidth = 40
+let g:vimspector_terminal_maxwidth = 75
+let g:vimspector_terminal_minwidth = 30
 
 " nerdcommenter plugin
 " Key map: https://github.com/preservim/nerdcommenter#default-mappings
