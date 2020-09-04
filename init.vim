@@ -58,6 +58,9 @@ set nowrap
 set foldmethod=syntax " :h fold-syntax
 set nofoldenable
 
+" split window position
+set splitbelow 
+
 " map leader key
 let mapleader = ","
 
@@ -72,24 +75,39 @@ tnoremap <leader>2 <C-\><C-n>:FloatermToggle<CR>
 map <leader>3 :TagbarToggle<CR>
 
 " tabs
-noremap <leader><Tab> :tabn<CR> " go to next tab
-noremap <leader><S-Tab> :tabp<CR> " go to previous tab
-noremap <leader>tc :tabc<CR> " close current tab
-noremap <leader>tm :tabm 0<CR> " move current tab to first
+"" go to next tab
+noremap <leader><Tab> :tabn<CR> 
+
+" go to previous tab
+noremap <leader><S-Tab> :tabp<CR> 
+
+" close current tab
+noremap <leader>tc :tabc<CR> 
+
+" move current tab to first
+noremap <leader>tm :tabm 0<CR> 
 
 " window
-noremap <leader>w <C-w>w " go to next tab
-noremap <leader>wt <C-w>T " open current window in tab
-noremap <leader>wc :clo<CR> " close current window
+" go to next window
+noremap <leader>w <C-w>w 
+
+" open current window in tab
+noremap <leader>wt <C-w>T 
+
+" close current window
+noremap <leader>wc :clo<CR> 
 
 " exit
-noremap <leader><Esc> :qa<CR> " quit
+" quit
+noremap <leader><Esc> :qa<CR> 
 
 " clear secreen
-nnoremap <C-L> :nohlsearch<CR><C-L> " extend default clean secreen keymap. Set no hl search result if exists.
+" extend default clean secreen keymap. Set no hl search result if exists.
+nnoremap <C-L> :nohlsearch<CR><C-L> 
 
 " vimspector
-map <leader>dc :call vimspector#Reset()<CR> " close vimspector
+" close vimspector
+map <leader>dc :call vimspector#Reset()<CR> 
 
 " NERDCommenter
 " https://github.com/preservim/nerdcommenter#default-mappings
@@ -102,6 +120,7 @@ map <leader>/ <leader>c<Space><CR>
 imap <leader><Space> <C-Space> 
 " Show document in a popup at the cursor location after a short delay.
 nmap <leader>D <plug>(YCMHover)
+let g:ycm_key_invoke_completion="<leader>."
 
 " UltiSnips
 " used in below configs
@@ -179,7 +198,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-
 call plug#end()
 
 " plugin config
@@ -243,6 +261,9 @@ let g:NERDToggleCheckAllLines = 1
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf="~/.config/nvim/.ycm_extra_conf.py"
+let g:ycm_add_preview_to_completeopt=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_add_preview_to_completeopt-option
+let g:ycm_autoclose_preview_window_after_completion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
+let g:ycm_autoclose_preview_window_after_insertion=1 " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_insertion-option
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
@@ -274,3 +295,4 @@ augroup autoformat_settings
     autocmd FileType rust AutoFormatBuffer rustfmt
     autocmd FileType vue AutoFormatBuffer prettier
 augroup END
+
