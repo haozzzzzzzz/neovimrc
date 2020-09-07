@@ -1,0 +1,23 @@
+snippet sptmpl ".vimspectore.json template" b
+{
+    "configurations": {
+        "Launch": {
+            "adapter": "vscode-cpptools",
+            "configuration": {
+                "name": "${1:main}",
+                "request": "launch",
+                "program": "${workspaceRoot}/$1.out",
+                "args": [],
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": true,
+                "stopAtEntry": true,
+                "MIMode": "gdb",
+                "logging": {
+                    "enableLogging": true
+                }
+            }
+        }
+    }
+}
+endsnippet

@@ -129,9 +129,9 @@ map <leader>/ <leader>c<Space><CR>
 " https://github.com/ycm-core/YouCompleteMe#ycmcompleter-subcommands
 " force trigger semantic completion
 let g:ycm_key_invoke_completion="<leader>."
-map <leader>zd :YcmCompleter GetDoc<CR>
-map <leader>zt :YcmCompleter GetType<CR>
-map <leader>zg :YcmCompleter GoTo<CR>
+map <leader>cd :YcmCompleter GetDoc<CR>
+map <leader>ct :YcmCompleter GetType<CR>
+map <leader>cg :YcmCompleter GoTo<CR>
 
 " FZF
 " https://github.com/junegunn/fzf.vim#commands
@@ -152,6 +152,7 @@ map <leader>ft :BTags<CR>
 map <leader>fw :Windows<CR>
 " search old files and open buffers
 map <leader>fh :History<CR>
+map <leader>fs :Snippets<CR>
 " search normal mode keymap
 map <leader>fm :Maps<CR>
 " search vim help tags
@@ -269,6 +270,10 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " let g:vimspector_code_minwidth = 40
 let g:vimspector_terminal_maxwidth = 75
 let g:vimspector_terminal_minwidth = 30
+
+"nerdtree
+"show hidden files
+let g:NERDTreeShowHidden=1
 
 " nerdcommenter plugin
 " Key map: https://github.com/preservim/nerdcommenter#default-mappings

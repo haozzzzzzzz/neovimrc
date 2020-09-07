@@ -14,3 +14,9 @@ IndentWidth.4
 - https://puremourning.github.io/vimspector/configuration.html#exception-breakpoints
 - website: https://puremourning.github.io/vimspector-web/
 - Here is an hidden file `.vimspectore.json`. For custom purpose, see ./.vimspectore.json.tmpl, create an .vimspector.json for your project.
+
+
+### youcompleteme senmatic completion
+- https://github.com/ycm-core/YouCompleteMe#option-1-use-a-compilation-database
+- Add `set(CMAKE_EXPORT_COMPILE_COMMANDS ON)` to CMakeLists.txt, and link the generated 
+compilation database to the root of yout project.
