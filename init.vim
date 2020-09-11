@@ -58,8 +58,12 @@ set nowrap
 set foldmethod=syntax " :h fold-syntax
 set nofoldenable
 
-" split window position
+" split window position to below
 set splitbelow 
+
+" set updatetime
+" modified reason: https://github.com/airblade/vim-gitgutter#getting-started
+set updatetime=100
 
 " map leader key
 let mapleader = ","
@@ -234,6 +238,11 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
+" git diff
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
+
 call plug#end()
 
 " plugin config
@@ -242,15 +251,22 @@ call plug#end()
 colorscheme dracula
 hi Comment ctermfg=246 
 
+" gitgutter
+function! GitGutterStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
+
 " lightline plugin
 " bottom status bar
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'git_gutter_status' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
+      \   'gitbranch': 'gitbranch#name',
+      \   'git_gutter_status': 'GitGutterStatus'
       \ },
       \ }
 
