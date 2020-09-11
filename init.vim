@@ -252,9 +252,15 @@ colorscheme dracula
 hi Comment ctermfg=246 
 
 " gitgutter
+" if error occurs in first init, hide the function below and ues PlugInstall
+" install gitgutter
 function! GitGutterStatus()
-  let [a,m,r] = GitGutterGetHunkSummary()
-  return printf('+%d ~%d -%d', a, m, r)
+    if !exists("*GitGutterGetHunkSummary")
+        return "Need Install GitGutter"
+    endif
+
+    let [a,m,r] = GitGutterGetHunkSummary()
+    return printf('+%d ~%d -%d', a, m, r)
 endfunction
 
 " lightline plugin
