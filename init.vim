@@ -216,6 +216,7 @@ Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 
 " YouCompleteMe plugin
+" https://github.com/ycm-core/YouCompleteMe
 Plug 'ycm-core/YouCompleteMe'
 
 " Comment plugin
