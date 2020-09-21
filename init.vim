@@ -136,6 +136,10 @@ let g:ycm_key_invoke_completion="<leader>."
 map <leader>cd :YcmCompleter GetDoc<CR>
 map <leader>ct :YcmCompleter GetType<CR>
 map <leader>cg :YcmCompleter GoTo<CR>
+" fix error or warning
+map <leader>cf :YcmCompleter FixIt<CR>
+" show detailed diagnostic info below status line
+map <leader>cl :YcmShowDetailedDiagnostic<CR>
 
 " FZF
 " https://github.com/junegunn/fzf.vim#commands
