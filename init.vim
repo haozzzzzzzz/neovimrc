@@ -101,6 +101,9 @@ noremap <leader>wt <C-w>T
 " close current window
 noremap <leader>wc :clo<CR> 
 
+" close preview window, ycm goto type preview window for example.
+noremap <leader>pc :pc<CR>
+
 " exit
 " quit
 noremap <leader><Esc> :qa<CR> 
